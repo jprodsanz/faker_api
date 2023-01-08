@@ -30,12 +30,14 @@ app.get('/', (req, res) => {
 });
 
 app.get('/api/users/new', (req, res) => {
-    res.json(createUser)
+    res.json(createUser())
 });
 
+
 app.get('/api/companies/new', (req, res) => {
-    res.json(createCompany)
+    res.json(createCompany())
 });
+
 app.get('/api/user/company', (req, res) => {
     const user = createUser()
     const company = createCompany()
